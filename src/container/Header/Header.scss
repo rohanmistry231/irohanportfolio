@@ -1,0 +1,273 @@
+.light #home {
+  position: relative;
+  background: url("../../assets/bgIMG_light.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  .app__wrapper {
+    padding: 0;
+
+    .copyright {
+      display: none;
+    }
+  }
+}
+.dark #home {
+  position: relative;
+  background: url("../../assets/bgIMG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  .app__wrapper {
+    padding: 0;
+
+    .copyright {
+      display: none;
+    }
+  }
+}
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.app__header {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+
+  padding: 6rem 2rem 0rem;
+
+  @media screen and (min-width: 2000px) {
+    padding-top: 8rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    margin-bottom: -2rem;
+  }
+  @media screen and (max-width: 450px) {
+    padding: 6rem 1rem 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-bottom: -4rem;
+  }
+}
+
+.app__header-info {
+  flex: 0.65;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+
+  margin: 0 2rem;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin-right: 0rem;
+  }
+}
+
+.app__header-badge {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  .badge-cmp,
+  .tag-cmp {
+    padding: 1rem 2rem;
+    background: var(--dark-gray-color);
+    border-radius: 15px;
+    flex-direction: row;
+    width: auto;
+
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .tag-cmp {
+    flex-direction: column;
+    margin-top: 1rem;
+
+    p {
+      width: 100%;
+      text-transform: capitalize;
+      text-align: right;
+    }
+  }
+
+  span {
+    font-size: 1rem;
+
+    @media screen and (min-width: 2000px) {
+      font-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.app__header-circles {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  margin-left: 1rem;
+
+  div:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 25rem;
+  }
+
+  div:nth-child(2) {
+    margin: 1.75rem;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  div:nth-child(3) {
+    width: 90px;
+    height: 90px;
+    margin-left: 1rem;
+    margin-top: 23rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    div:nth-child(2) {
+      width: 400px;
+      height: 400px;
+    }
+
+    div:nth-child(3) {
+      width: 170px;
+      height: 170px;
+    }
+
+    div:nth-child(1) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+.circle-cmp {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--dark-gray-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  img {
+    width: 60%;
+    height: 60%;
+  }
+}
+.circle-cmp:before,
+.circle-cmp:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 0.5px solid #ffffff9a;
+  border-radius: 50%;
+}
+.light .circle-cmp:after {
+  border: 0.5px solid #5656569a;
+}
+
+.circle-cmp:before {
+  animation: ripple 2s linear infinite;
+}
+
+.circle-cmp:after {
+  animation: ripple 2s linear 1s infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.app__header-img {
+  flex: 1;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+  }
+  .overlay_circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin: 2rem 0;
+  }
+}
