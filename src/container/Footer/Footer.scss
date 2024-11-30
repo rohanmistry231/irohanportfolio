@@ -4,6 +4,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+
   .app__wrapper {
     padding: 0;
 
@@ -12,6 +13,7 @@
     }
   }
 }
+
 .app__footer {
   flex: 1;
   width: 100%;
@@ -54,10 +56,12 @@
     p {
       font-weight: 500;
     }
+
     a {
       text-decoration: none;
       font-weight: 500;
     }
+
     &:hover {
       box-shadow: 0 0 25px var(--hover-color);
     }
@@ -73,6 +77,7 @@
     width: 100%;
   }
 }
+
 .app__footer-form {
   width: 60%;
   flex-direction: column;
@@ -134,6 +139,7 @@
     width: 100%;
     margin: 1rem 0;
   }
+
   @media screen and (max-width: 450px) {
     width: 86%;
   }

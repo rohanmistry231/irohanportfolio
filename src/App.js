@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { About, Footer, Skills, Work, Certificates} from "./container";
+import { About, Footer, Skills, Work, Certificates } from "./container";
 import Header from "./container/Header/Header";
 import { Navbar } from "./components";
 import "./App.scss";
 import { images } from "./constants";
-
 
 const App = () => {
   const [mode, setMode] = useState(
@@ -22,7 +21,7 @@ const App = () => {
         <About />
         <Work />
         <Skills />
-        <Certificates/>
+        <Certificates />
         <Footer />
       </div>
     </div>

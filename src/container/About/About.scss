@@ -27,6 +27,7 @@
     object-fit: cover;
     animation: mymove 5s infinite;
   }
+
   @keyframes mymove {
     50% {
       box-shadow: 2px 2px 30px #8001ffac;

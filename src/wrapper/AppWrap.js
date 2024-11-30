@@ -10,7 +10,9 @@ const AppWrap = (Component, idName, classNames) =>
           <Component {...props} />
 
           <div className="copyright">
-            <p className="p-text text_color_light">@2023 irohanportfolio.netlify.app</p>
+            <p className="p-text text_color_light">
+              @2023 irohanportfolio.netlify.app
+            </p>
             <p className="p-text text_color_light">All rights reserved</p>
           </div>
         </div>

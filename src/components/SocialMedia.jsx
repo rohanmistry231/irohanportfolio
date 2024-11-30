@@ -5,7 +5,10 @@ const SocialMedia = () => (
   <div className="app__social">
     <div
       onClick={() =>
-        window.open("https://www.linkedin.com/in/rohan-mistry-493987202/", "_blank")
+        window.open(
+          "https://www.linkedin.com/in/rohan-mistry-493987202/",
+          "_blank"
+        )
       }
       className="background"
     >
@@ -13,12 +16,7 @@ const SocialMedia = () => (
     </div>
     <div
       className="background"
-      onClick={() =>
-        window.open(
-          "https://github.com/rohanmisry231",
-          "_blank"
-        )
-      }
+      onClick={() => window.open("https://github.com/rohanmisry231", "_blank")}
     >
       <BsGithub />
     </div>

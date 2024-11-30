@@ -25,5 +25,5 @@ export default {
   cv,
   photos,
   circleWhite,
-  youtube
+  youtube,
 };

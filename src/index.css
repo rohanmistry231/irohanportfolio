@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 
 :root {
   --font-base: "Poppins";
@@ -7,10 +7,14 @@
   --secondary-color: #0055d5;
   --black-color: #030303;
   --dark-gray-color: #373737;
-  --light-text-color:#c7d5ea;
+  --light-text-color: #c7d5ea;
   --hover-color: #00000052;
-  --background-gradient: linear-gradient(90deg, rgba(43, 43, 43, 1) 0%, rgb(22, 22, 22) 100%);
-  --background-gradient-light:linear-gradient(to left, #8e9eab, #eef2f3);
+  --background-gradient: linear-gradient(
+    90deg,
+    rgba(43, 43, 43, 1) 0%,
+    rgb(22, 22, 22) 100%
+  );
+  --background-gradient-light: linear-gradient(to left, #8e9eab, #eef2f3);
   --lightGray-color: #e4e4e4;
   --gray-color: #a9b2bf;
   --brown-color: #46364a;

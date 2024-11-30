@@ -80,19 +80,24 @@ const Navbar = (props) => {
             >
               <HiX onClick={() => setToggle(false)} />
               <ul>
-                {["home", "about", "work", "skills", "certificates", "contact"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href={`#${item}`}
-                        onClick={() => setToggle(false)}
-                        className="text_color"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {[
+                  "home",
+                  "about",
+                  "work",
+                  "skills",
+                  "certificates",
+                  "contact",
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item}`}
+                      onClick={() => setToggle(false)}
+                      className="text_color"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           )}

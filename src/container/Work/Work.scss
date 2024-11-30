@@ -5,6 +5,7 @@
   background-position: center;
   background-repeat: repeat;
 }
+
 .dark #work {
   position: relative;
   background: url("../../assets/bgIMG.png");
@@ -12,6 +13,7 @@
   background-position: center;
   background-repeat: repeat;
 }
+
 .app__work-filter {
   display: flex;
   flex-direction: row;
@@ -48,10 +50,12 @@
     color: #fff;
   }
 }
+
 .app__works {
   flex: 1;
   width: 100%;
   flex-direction: column;
+
   @media screen and (max-width: 450px) {
     padding-top: 6rem;
   }

@@ -30,11 +30,11 @@ const Certificates = () => {
             className="app__profile-item"
             key={certificates.title + index}
           >
-            <img src={urlFor(certificate.imgUrl)} alt={certificate.title}/>
+            <img src={urlFor(certificate.imgUrl)} alt={certificate.title} />
             <h2 className="bold-text text_color" style={{ marginTop: 20 }}>
               {certificate.title}
             </h2>
-            <p className="p-text text_color_gray" style={{ marginTop: 10 }} >
+            <p className="p-text text_color_gray" style={{ marginTop: 10 }}>
               {certificate.description}
             </p>
           </motion.div>

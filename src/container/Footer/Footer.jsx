@@ -1,4 +1,4 @@
-import React, { useState , useRef } from "react";
+import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -13,14 +13,23 @@ const Footer = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm('service_4mbtpvy', 'template_ngkqteh', form.current, '4TR23d31pMri4V8p3')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_4mbtpvy",
+        "template_ngkqteh",
+        form.current,
+        "4TR23d31pMri4V8p3"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
           setLoading(false);
           setIsFormSubmitted(true);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
   return (
@@ -59,7 +68,11 @@ const Footer = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <form ref={form} onSubmit={sendEmail} className="app__footer-form app__flex">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="app__footer-form app__flex"
+        >
           <div className="app__flex">
             <input
               className="p-text background-with-shadow text_color border"
