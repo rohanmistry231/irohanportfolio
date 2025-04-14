@@ -39,37 +39,14 @@
 }
 
 @keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  10% {
-    transform: rotate(14deg);
-  }
-
-  20% {
-    transform: rotate(-8deg);
-  }
-
-  30% {
-    transform: rotate(14deg);
-  }
-
-  40% {
-    transform: rotate(-4deg);
-  }
-
-  50% {
-    transform: rotate(10deg);
-  }
-
-  60% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .app__header {
@@ -77,7 +54,6 @@
   width: 100%;
   height: 100%;
   flex-direction: row;
-
   padding: 6rem 2rem 0rem;
 
   @media screen and (min-width: 2000px) {
@@ -91,9 +67,6 @@
 
   @media screen and (max-width: 450px) {
     padding: 6rem 1rem 2rem;
-  }
-
-  @media screen and (max-width: 450px) {
     margin-bottom: -4rem;
   }
 }
@@ -105,7 +78,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
-
   margin: 0 2rem;
 
   @media screen and (max-width: 1200px) {
@@ -128,14 +100,12 @@
     border-radius: 15px;
     flex-direction: row;
     width: auto;
-
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   }
 
   .tag-cmp {
     flex-direction: column;
     margin-top: 1rem;
-
     p {
       width: 100%;
       text-transform: capitalize;
@@ -166,41 +136,14 @@
   height: 100%;
   margin-left: 1rem;
 
-  div:nth-child(1) {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 25rem;
-  }
-
-  div:nth-child(2) {
-    margin: 1.75rem;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-  }
-
-  div:nth-child(3) {
-    width: 90px;
-    height: 90px;
-    margin-left: 1rem;
-    margin-top: 23rem;
-  }
+  div:nth-child(1) { width: 100px; height: 100px; margin-bottom: 25rem; }
+  div:nth-child(2) { margin: 1.75rem; width: 150px; height: 150px; }
+  div:nth-child(3) { width: 90px; height: 90px; margin-left: 1rem; margin-top: 23rem; }
 
   @media screen and (min-width: 2000px) {
-    div:nth-child(2) {
-      width: 400px;
-      height: 400px;
-    }
-
-    div:nth-child(3) {
-      width: 170px;
-      height: 170px;
-    }
-
-    div:nth-child(1) {
-      width: 200px;
-      height: 200px;
-    }
+    div:nth-child(2) { width: 400px; height: 400px; }
+    div:nth-child(3) { width: 170px; height: 170px; }
+    div:nth-child(1) { width: 200px; height: 200px; }
   }
 
   @media screen and (max-width: 1200px) {
@@ -248,34 +191,24 @@
 }
 
 @keyframes ripple {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.3);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1.6);
-    opacity: 0;
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
 }
 
 .app__header-img {
   flex: 1;
   height: 100%;
-
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
 
-  img {
+  .profile-image {
     width: 100%;
     object-fit: contain;
     z-index: 1;
+    position: relative;
   }
 
   .overlay_circle {
@@ -286,6 +219,32 @@
     z-index: 0;
     width: 100%;
     height: 90%;
+  }
+
+  .loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    animation: fadeOut 0.5s ease forwards; /* Fade out when image loads */
+
+    &:before {
+      content: "Loading...";
+      color: #00ffff; /* Cyan text for sci-fi feel */
+      font-size: 1.5rem;
+      text-shadow: 0 0 10px #00ffff;
+    }
+  }
+
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; display: none; }
   }
 
   @media screen and (max-width: 1200px) {

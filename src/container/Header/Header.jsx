@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { AppWrap } from "../../wrapper";
@@ -17,7 +17,8 @@ const scaleVariants = {
 };
 
 const Header = (props) => {
-  console.log("hello", props);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
+
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -59,11 +60,21 @@ const Header = (props) => {
       </motion.div>
 
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
-        <img src={images.profile} alt="profile_bg" loading="lazy" />
+        <motion.img
+          src={images.profile}
+          alt="profile_bg"
+          className="profile-image"
+          initial={{ opacity: 0 }} // Start with opacity 0
+          animate={{ opacity: isImageLoaded ? 1 : 0 }} // Fade in when loaded
+          transition={{ duration: 0.5 }}
+          onLoad={() => setIsImageLoaded(true)} // Set state when image loads
+          loading="lazy"
+        />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -71,17 +82,16 @@ const Header = (props) => {
           alt="profile_circle"
           className="overlay_circle"
         />
+        {!isImageLoaded && <div className="loading-overlay"></div>} {/* Loading indicator */}
       </motion.div>
+
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
         {[images.graphic, images.modeling, images.code].map((circle, index) => (
-          <div
-            className="circle-cmp app__flex background"
-            key={`circle-${index}`}
-          >
+          <div className="circle-cmp app__flex background" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
           </div>
         ))}

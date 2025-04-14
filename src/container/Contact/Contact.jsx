@@ -2,9 +2,9 @@ import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import "./Footer.scss";
+import "./Contact.scss";
 
-const Footer = () => {
+const Contact = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const form = useRef();
@@ -37,9 +37,9 @@ const Footer = () => {
       <h2 className="head-text text_color">
         Contact <span>Me</span>
       </h2>
-      <div className="app__footer-cards">
+      <div className="app__contact-cards">
         <div
-          className="app__footer-card background-with-shadow"
+          className="app__contact-card background-with-shadow"
           onClick={() =>
             window.open("mailto:rohanmistry231@gmail.com", "_blank")
           }
@@ -48,14 +48,14 @@ const Footer = () => {
           <p className="p-text text_color_gray">rohanmistry231@gmail.com</p>
         </div>
         <div
-          className="app__footer-card background-with-shadow"
+          className="app__contact-card background-with-shadow"
           onClick={() => window.open("tel:+918980067632", "_blank")}
         >
           <img src={images.mobile} alt="phone" />
           <p className="p-text text_color_gray">+91 8980067632</p>
         </div>
         <div
-          className="app__footer-card background-with-shadow"
+          className="app__contact-card background-with-shadow"
           onClick={() =>
             window.open(
               "https://drive.google.com/file/d/19d7722pmyOqa42xXYp8vmJynyNvIGLme/view?usp=sharing",
@@ -71,7 +71,7 @@ const Footer = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="app__footer-form app__flex"
+          className="app__contact-form app__flex"
         >
           <div className="app__flex">
             <input
@@ -112,7 +112,7 @@ const Footer = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Footer, "app__footer"),
+  MotionWrap(Contact, "app__contact"),
   "contact",
   "app__whitebg"
 );

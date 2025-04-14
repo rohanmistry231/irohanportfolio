@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { About, Footer, Skills, Work, Certificates } from "./container";
+import { About, Skills, Work, Certificates, Contact } from "./container";
 import Header from "./container/Header/Header";
 import { Navbar } from "./components";
 import "./App.scss";
@@ -22,7 +22,7 @@ const App = () => {
         <Work />
         <Skills />
         <Certificates />
-        <Footer />
+        <Contact />
       </div>
     </div>
   );
