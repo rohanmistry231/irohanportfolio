@@ -15,7 +15,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  cursor: pointer !important;
+  cursor: pointer;
 
   img {
     width: 180px;
@@ -34,7 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -3rem;
+  margin-left: 1rem;
   list-style: none;
 
   li {
