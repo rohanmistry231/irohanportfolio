@@ -10,8 +10,14 @@ import modeling from "../assets/modeling.png";
 import code from "../assets/code.png";
 import graphic from "../assets/graphic-designer.png";
 import cv from "../assets/cv.png";
+import medium from "../assets/medium.png";
+import github from "../assets/github.png";
+import aiwebstudio from "../assets/aiwebstudio.png";
 
 export default {
+  aiwebstudio,
+  github,
+  medium,
   email,
   mobile,
   profile,

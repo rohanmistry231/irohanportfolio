@@ -47,12 +47,9 @@ const Work = () => {
           "Graphic Designs",
           "Logo Designs",
           "3D Modeles",
-          "UI/UX",
           "Web App",
           "Calligraphy Designs",
           "Machine Learning",
-          "Data Analytics",
-          "Artificial Intelligence",
           "All",
         ].map((item, index) => (
           <div
