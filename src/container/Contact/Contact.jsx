@@ -49,33 +49,6 @@ const Contact = () => {
         </div>
         <div
           className="app__contact-card background-with-shadow"
-          onClick={() =>
-            window.open("https://medium.com/@rohanmistry231", "_blank")
-          }
-        >
-          <img src={images.medium} alt="email" />
-          <p className="p-text text_color_gray">Medium: @rohanmistry231</p>
-        </div>
-        <div
-          className="app__contact-card background-with-shadow"
-          onClick={() =>
-            window.open("https://github.com/rohanmistry231", "_blank")
-          }
-        >
-          <img src={images.github} alt="email" />
-          <p className="p-text text_color_gray">GitHub: rohanmistry231</p>
-        </div>
-        <div
-          className="app__contact-card background-with-shadow"
-          onClick={() =>
-            window.open("https://ai-webstudio.netlify.app/", "_blank")
-          }
-        >
-          <img src={images.aiwebstudio} alt="email" />
-          <p className="p-text text_color_gray">AI Webstudio</p>
-        </div>
-        <div
-          className="app__contact-card background-with-shadow"
           onClick={() => window.open("tel:+918980067632", "_blank")}
         >
           <img src={images.mobile} alt="phone" />
@@ -92,6 +65,33 @@ const Contact = () => {
         >
           <img src={images.cv} alt="cv" />
           <p className="p-text text_color_gray">My Resume</p>
+        </div>
+        <div
+          className="app__contact-card background-with-shadow"
+          onClick={() =>
+            window.open("https://github.com/rohanmistry231", "_blank")
+          }
+        >
+          <img src={images.github} alt="email" />
+          <p className="p-text text_color_gray">GitHub: rohanmistry231</p>
+        </div>
+        <div
+          className="app__contact-card background-with-shadow"
+          onClick={() =>
+            window.open("https://medium.com/@rohanmistry231", "_blank")
+          }
+        >
+          <img src={images.medium} alt="email" />
+          <p className="p-text text_color_gray">Medium: @rohanmistry231</p>
+        </div>
+        <div
+          className="app__contact-card background-with-shadow"
+          onClick={() =>
+            window.open("https://ai-webstudio.netlify.app/", "_blank")
+          }
+        >
+          <img src={images.aiwebstudio} alt="email" />
+          <p className="p-text text_color_gray">AI Webstudio</p>
         </div>
       </div>
       {!isFormSubmitted ? (
