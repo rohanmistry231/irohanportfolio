@@ -45,12 +45,10 @@ const Header = (props) => {
                 cursorStyle={"|"}
                 cursor={true}
                 words={[
-                  "Creative Graphics Designer",
-                  "Frontend Developer",
-                  "Data Analyst",
-                  "3D Modeler",
-                  "Photographer",
-                  "Music composer",
+                  "MERN Stack Developer",
+                  "Graphics Designer",
+                  "AI ML Developer",
+                  "Technical Blogger",
                 ]}
                 loop={false}
               />
