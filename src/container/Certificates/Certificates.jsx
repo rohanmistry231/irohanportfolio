@@ -28,14 +28,14 @@ const Certificates = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
-            key={certificates.title + index}
+            key={certificate._id} // Use _id instead of certificate.title + index
           >
-            <img src={urlFor(certificate.imgUrl)} alt={certificate.title} />
+            <img src={urlFor(certificate.imgUrl)} alt={certificate.title || "Certificate"} />
             <h2 className="bold-text text_color" style={{ marginTop: 20 }}>
-              {certificate.title}
+              {certificate.title || "Untitled"}
             </h2>
             <p className="p-text text_color_gray" style={{ marginTop: 10 }}>
-              {certificate.description}
+              {certificate.description || "No description available"}
             </p>
           </motion.div>
         ))}

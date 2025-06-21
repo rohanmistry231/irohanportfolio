@@ -15,7 +15,6 @@ const Skills = () => {
         return a.number - b.number;
       });
       setSkills(skillsData);
-      console.log("Data here", skillsData);
     });
   }, []);
 
