@@ -35,6 +35,16 @@
   .border {
     border: 0.8px solid rgb(57, 57, 57);
   }
+
+  .app__loader {
+    background-color: var(--white-color);
+  }
+
+  .loader-text {
+    color: var(--dark-gray-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
 }
 
 .dark {
@@ -52,6 +62,15 @@
 
   .background_img {
     background: url("./assets/bgIMG.png");
+  }
+
+  .app__loader {
+    background-color: var(--dark-gray-color);
+  }
+
+  .loader-text {
+    color: var(--white-color);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -79,7 +98,6 @@
 .app__container {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   flex-direction: row;
 }
@@ -104,7 +122,6 @@
 .copyright {
   width: 100%;
   padding: 2rem 0 0;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -167,7 +184,6 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
   padding: 1rem;
 
   div {
@@ -177,12 +193,9 @@
     background-color: var(--dark-gray-color);
     margin: 0.25rem 0;
     cursor: pointer;
-    // border: 1px solid var(--lightGray-color);
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     transition: all 0.3s ease-in-out;
 
     svg {
@@ -203,7 +216,6 @@
     @media screen and (min-width: 2000px) {
       width: 70px;
       height: 70px;
-
       margin: 0.5rem 0;
 
       svg {
@@ -219,7 +231,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   padding: 1rem;
 
   .app__navigation-dot {
@@ -228,7 +239,6 @@
     border-radius: 50%;
     background-color: #cbcbcb;
     margin: 0.5rem;
-
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
@@ -242,8 +252,79 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+.app__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
 
+.loader-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+}
+
+.loader-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 2s steps(14) forwards;
+  position: relative;
+}
+
+.loader-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--secondary-color);
+  animation: blink 0.5s step-end infinite;
+}
+
+.loader-text::before {
+  content: 'irohanportfolio';
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--secondary-color);
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0%, 100% { -webkit-text-stroke-color: var(--secondary-color); opacity: 0.5; }
+  50% { -webkit-text-stroke-color: transparent; opacity: 1; }
+}
+
+@keyframes burst {
+  0% { opacity: 0.8; transform: scale(1) translate(0, 0); }
+  100% { opacity: 0; transform: scale(2) translate(20px, -20px); }
+}
+
+@media screen and (max-width: 500px) {
   .app__navigation,
   .app__social {
     display: none;
@@ -251,5 +332,15 @@
 
   .copyright {
     padding: 2rem;
+  }
+
+  .loader-container {
+    max-width: 300px;
+    height: 80px;
+  }
+
+  .loader-text {
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
   }
 }
