@@ -48,7 +48,6 @@ const Work = () => {
           "Logo Designs",
           "3D Modeles",
           "Web App",
-          "Calligraphy Designs",
           "Machine Learning",
           "All",
         ].map((item, index) => (
